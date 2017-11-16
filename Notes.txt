@@ -1,0 +1,14 @@
+﻿* Chú ý trong các bài học chương Exception này *
+1. Bài học 3: 
+	- Các loại throw exception: string, char const* , int.
+2. Bài học 4:
+	- Loại exception bad_alloc, những loại exception trong quá trình khai báo,... mà 
+	  mặc định của thư viện trong C++ sẽ throw ra.
+3. Bài học 5:
+	- Cách tạo ra một exception của mình và làm thế nào để modify exception đó.
+4. Bài học 6:
+	- Cách bắt đúng exception. Có nghĩa các exception như bad_alloc,... thuộc con của exception tổng quát,
+	  nên khi code, phải catch những exception như bad_alloc,... trước rồi mới tới exception tổng quát
+
+REF: http://www.cplusplus.com/reference/exception/exception/
+Happy coding :D
