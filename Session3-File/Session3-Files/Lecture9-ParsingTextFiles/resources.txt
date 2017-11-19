@@ -1,0 +1,4 @@
+﻿Banh mi:10000
+Hu tieu:15000
+Banh gio:13000
+Nuoc cam:14000
