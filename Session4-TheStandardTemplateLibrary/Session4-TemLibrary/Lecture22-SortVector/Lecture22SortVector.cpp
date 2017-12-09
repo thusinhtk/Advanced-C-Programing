@@ -28,7 +28,7 @@ public:
 			return id < other.id;
 	}*/
 
-	friend bool comp(const Test &first, const Test &second) {
+	friend bool comp(const Test &first, const Test &second) { // friend to access private variables
 		if (first.id == second.id) {
 			return first.name < second.name;
 		}
