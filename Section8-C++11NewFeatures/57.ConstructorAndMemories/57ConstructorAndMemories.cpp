@@ -5,30 +5,50 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory.h>
 
 using namespace std;
 
 class Test
 {
+private:
+	static const int SIZE = 100;
+	int* _pBuffer;
 public:
 	Test()
 	{
 		cout << "Constructor" << endl;
+
+		_pBuffer = new int[SIZE] {};
 	}
 
 	Test(int i)
 	{
 		cout << "Parameterized" << endl;
+
+		_pBuffer = new int [SIZE] {};
+
+		for (unsigned i = 0; i < SIZE; ++i)
+		{
+			_pBuffer[i] = 7 * i;
+		}
 	}
 
 	Test(const Test &other)
 	{
 		cout << "Copy constructor" << endl;
+
+		_pBuffer = new int [SIZE] {};
+		memcpy(_pBuffer, other._pBuffer, SIZE * sizeof(int));
 	}
 
 	Test &operator=(const Test &other)
 	{
 		cout << "asssigment" << endl;
+
+		_pBuffer = new int [SIZE] {};
+		memcpy(_pBuffer, other._pBuffer, SIZE * sizeof(int));
+
 		return *this;
 	}
 
@@ -62,4 +82,3 @@ int main()
 
 	return 0;
 }
-
